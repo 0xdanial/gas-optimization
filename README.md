@@ -1,4 +1,4 @@
-
+![memory](Gas.png)
 # Slots of storage
 
 In Ethereum, you pay the gas fee for anything storage slot used. because you should be optimizing your code to little storage slot use for costs of little gas. 
