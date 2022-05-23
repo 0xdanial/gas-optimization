@@ -32,17 +32,20 @@ uint b = 0;
 
 Caching the array length outside a loop:
 
-👎 Without Caching: 
+👎 Without optimization: 
 ```ruby
 for (uint256 i = 0; i < array.length; i++) {
 }
 ```
-👍 With Caching:
+👍 With optimization:
 ```ruby
-uint256 len = array.length
-for (uint256 i = 0; i < len; i++) {
+uint256 length = array.length;
+for (uint256 i=0; i < length;) {
+	doStuff(array[i]);
+	unchecked { ++i; }
 }
 ```
+
 ____
 More resources:
 
